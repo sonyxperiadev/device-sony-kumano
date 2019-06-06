@@ -30,8 +30,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # A/B support
 AB_OTA_UPDATER := true
-TARGET_USES_HARDWARE_QCOM_BOOTCTRL := true
-
 PRODUCT_SHIPPING_API_LEVEL := 26
 
 # A/B OTA dexopt package
@@ -51,15 +49,8 @@ PRODUCT_PACKAGES += \
     update_engine_client \
     update_engine_sideload \
     update_verifier \
-    bootctrl.sm8150
-
-# Enable update engine sideloading by including the static version of the
-# boot_control HAL and its dependencies.
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sm8150 \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.sm8150.recovery
 
 AB_OTA_PARTITIONS += \
     boot \
