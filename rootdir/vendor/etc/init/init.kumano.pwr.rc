@@ -1,0 +1,196 @@
+# Copyright 2014 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on charger
+    # Disable thermal
+    write /sys/module/msm_thermal/core_control/enabled 0
+
+    # Bring CPUs online
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1
+
+    # Configure governor settings for Silver cluster
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 576000
+
+    # Configure governor settings for Gold cluster
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 710400
+
+    # Configure governor settings for Gold+ cluster
+    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq 825600
+
+    # Bring CPUs offline
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
+
+    # Enable thermal
+    write /sys/module/msm_thermal/core_control/enabled 1
+
+on property:sys.boot_completed=1
+    # Setting b.L scheduler parameters
+    write /proc/sys/kernel/sched_upmigrate 95
+    write /proc/sys/kernel/sched_downmigrate 85
+    write /proc/sys/kernel/sched_group_upmigrate 100
+    write /proc/sys/kernel/sched_group_downmigrate 95
+    write /proc/sys/kernel/sched_select_prev_cpu_us 0
+    write /proc/sys/kernel/sched_freq_inc_notify 400000
+    write /proc/sys/kernel/sched_freq_dec_notify 400000
+    write /proc/sys/kernel/sched_spill_nr_run 5
+    write /proc/sys/kernel/sched_restrict_cluster_spill 1
+
+    # Disable thermal
+    write /sys/module/msm_thermal/core_control/enabled 0
+
+		# configure governor settings for silver cluster
+		write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+		write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 0
+		write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 0
+		write /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq 1209600
+		write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 576000
+		write /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl 1
+
+		# configure governor settings for gold cluster
+		write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedutil"
+		write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 0
+		write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 0
+		write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq 1612800
+		write /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl 1
+
+		# configure governor settings for gold+ cluster
+		write /sys/devices/system/cpu/cpufreq/policy7/scaling_governor "schedutil"
+		write /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us 0
+		write /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us 0
+		write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 1612800
+		write /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl 1
+
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 120
+
+    write /proc/sys/kernel/sched_boost 0
+
+    # re-enable thermal
+    write /sys/module/msm_thermal/core_control/enabled 1
+
+    # Bring up all cores online
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1
+
+    # Disable CPU Retention
+    write /sys/module/lpm_levels/L3/cpu0/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu1/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu2/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu3/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu4/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu5/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu6/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/cpu7/ret/idle_enabled N
+    write /sys/module/lpm_levels/L3/l3-dyn-ret/idle_enabled N
+
+    # Turn on sleep modes.
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+
+	# Enable bus-dcvs
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/governor "bw_hwmon"
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/polling_interval 40
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/mbps_zones "2288 4577 7110 9155 12298 14236 15258"
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/sample_ms 4
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/io_percent 50
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/hist_memory 20
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/hyst_length 10
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/down_thres 30
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/guard_band_mbps 0
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/up_scale 250
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/bw_hwmon/idle_mbps 1600
+		write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw/max_freq 14236
+
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/governor "bw_hwmon"
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/polling_interval 40
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/mbps_zones "1720 2929 3879 5931 6881 7980"
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/sample_ms 4
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/io_percent 80
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/hist_memory 20
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/hyst_length 10
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/down_thres 30
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/guard_band_mbps 0
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/up_scale 250
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/bw_hwmon/idle_mbps 1600
+		write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw/max_freq 6881
+
+		write /sys/devices/virtual/npu/msm_npu/pwr 1
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/governor  "bw_hwmon"
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/polling_interval 40
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/mbps_zones "1720 2929 3879 5931 6881 7980"
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/sample_ms 4
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/io_percent 80
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/hist_memory 20
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/hyst_length 6
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/down_thres 30
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/guard_band_mbps 0
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/up_scale 250
+		write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw/bw_hwmon/idle_mbps 0
+		write /sys/devices/virtual/npu/msm_npu/pwr 0
+
+    #Enable mem_latency governor for L3, LLCC, and DDR scaling
+
+    # Silver Cores  
+		write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat/devfreq/*cpu*-lat/governor "mem_latency"
+		write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat/devfreq/*cpu*-lat/polling_interval 10
+		write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat/devfreq/*cpu*-lat/mem_latency/ratio_ceil 400
+
+		write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-llcc-lat/devfreq/*cpu*-lat/governor "mem_latency"
+		write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-llcc-lat/devfreq/*cpu*-lat/polling_interval 10
+		write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-llcc-lat/devfreq/*cpu*-lat/mem_latency/ratio_ceil 400
+
+		write /sys/devices/platform/soc/soc:qcom,cpu0-llcc-ddr-lat/devfreq/*cpu*-lat/governor "mem_latency"
+		write /sys/devices/platform/soc/soc:qcom,cpu0-llcc-ddr-lat/devfreq/*cpu*-lat/polling_interval 10
+		write /sys/devices/platform/soc/soc:qcom,cpu0-llcc-ddr-lat/devfreq/*cpu*-lat/mem_latency/ratio_ceil 400
+
+    # Gold Cores
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-l3-lat/devfreq/*cpu*-lat/governor "mem_latency"
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-l3-lat/devfreq/*cpu*-lat/polling_interval 10
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-l3-lat/devfreq/*cpu*-lat/mem_latency/ratio_ceil 4000
+
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-llcc-lat/devfreq/*cpu*-lat/governor "mem_latency"
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-llcc-lat/devfreq/*cpu*-lat/polling_interval 10
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-llcc-lat/devfreq/*cpu*-lat/mem_latency/ratio_ceil 4000
+
+		write /sys/devices/platform/soc/soc:qcom,cpu4-llcc-ddr-lat/devfreq/*cpu*-lat/governor "mem_latency"
+		write /sys/devices/platform/soc/soc:qcom,cpu4-llcc-ddr-lat/devfreq/*cpu*-lat/polling_interval 10
+		write /sys/devices/platform/soc/soc:qcom,cpu4-llcc-ddr-lat/devfreq/*cpu*-lat/mem_latency/ratio_ceil 4000
+
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-latfloor/devfreq/*cpu-ddr-latfloor*/governor "compute"
+		write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-latfloor/devfreq/*cpu-ddr-latfloor*/polling_interval 10
+
+	  #Prime L3 ratio ceil
+		write /sys/devices/platform/soc/soc:qcom,cpu7-cpu-l3-lat/devfreq/*cpu7-cpu-l3-lat/mem_latency/ratio_ceil 20000
+
+
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0

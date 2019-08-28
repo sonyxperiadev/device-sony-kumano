@@ -1,0 +1,55 @@
+###################################
+# Dev block nodes
+#
+/dev/block/mmcblk0                                             u:object_r:sd_block_device:s0
+/dev/block/mmcblk0p1                                           u:object_r:sd_block_device:s0
+
+# Block device holding the GPT, where the A/B attributes are stored.
+/dev/block/sda                                                 u:object_r:gpt_block_device:s0
+
+# Block devices for the drive that holds the xbl_a and xbl_b partitions.
+/dev/block/sd[bc]1?                                            u:object_r:xbl_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/modemst1        u:object_r:modem_block_device:s0
+/dev/block/bootdevice/by-name/modemst1                         u:object_r:modem_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/modemst2        u:object_r:modem_block_device:s0
+/dev/block/bootdevice/by-name/modemst2                         u:object_r:modem_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/fsg             u:object_r:modem_block_device:s0
+/dev/block/bootdevice/by-name/fsg                              u:object_r:modem_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/fsc             u:object_r:modem_block_device:s0
+/dev/block/bootdevice/by-name/fsc                              u:object_r:modem_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/ssd             u:object_r:ssd_block_device:s0
+/dev/block/bootdevice/by-name/ssd                              u:object_r:ssd_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/dsp_[ab]        u:object_r:adsprpcd_block_device:s0
+/dev/block/bootdevice/by-name/dsp_[ab]                         u:object_r:adsprpcd_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/TA              u:object_r:ta_block_device:s0
+/dev/block/bootdevice/by-name/TA                               u:object_r:ta_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/userdata        u:object_r:userdata_block_device:s0
+/dev/block/bootdevice/by-name/userdata                         u:object_r:userdata_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/boot_[ab]       u:object_r:boot_block_device:s0
+/dev/block/bootdevice/by-name/boot_[ab]                        u:object_r:boot_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/misc            u:object_r:misc_block_device:s0
+/dev/block/bootdevice/by-name/misc                             u:object_r:misc_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/persist         u:object_r:persist_block_device:s0
+/dev/block/bootdevice/by-name/persist                          u:object_r:persist_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/rdimage_[ab]    u:object_r:ramdump_block_device:s0
+/dev/block/bootdevice/by-name/rdimage_[ab]                     u:object_r:ramdump_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/oem_[ab]        u:object_r:system_block_device:s0
+/dev/block/bootdevice/by-name/oem_[ab]                         u:object_r:system_block_device:s0
+
+/dev/block/platform/soc/1d84000\.ufshc/by-name/vendor_[ab]     u:object_r:system_block_device:s0
+/dev/block/bootdevice/by-name/vendor_[ab]                      u:object_r:system_block_device:s0
+
+/dev/block/zram0                                               u:object_r:swap_block_device:s0

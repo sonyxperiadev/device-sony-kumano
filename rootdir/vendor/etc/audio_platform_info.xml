@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Copyright (c) 2014, 2016-2018, The Linux Foundation. All rights reserved. -->
+<!--                                                                        -->
+<!-- Redistribution and use in source and binary forms, with or without     -->
+<!-- modification, are permitted provided that the following conditions are -->
+<!-- met:                                                                   -->
+<!--     * Redistributions of source code must retain the above copyright   -->
+<!--       notice, this list of conditions and the following disclaimer.    -->
+<!--     * Redistributions in binary form must reproduce the above          -->
+<!--       copyright notice, this list of conditions and the following      -->
+<!--       disclaimer in the documentation and/or other materials provided  -->
+<!--       with the distribution.                                           -->
+<!--     * Neither the name of The Linux Foundation nor the names of its    -->
+<!--       contributors may be used to endorse or promote products derived  -->
+<!--       from this software without specific prior written permission.    -->
+<!--                                                                        -->
+<!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED           -->
+<!-- WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF   -->
+<!-- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT -->
+<!-- ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS -->
+<!-- BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR -->
+<!-- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF   -->
+<!-- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR        -->
+<!-- BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,  -->
+<!-- OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN -->
+<!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
+<audio_platform_info>
+    <acdb_ids>
+        <device name="SND_DEVICE_OUT_AFE_PROXY" acdb_id="45"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_A2DP" acdb_id="799"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" acdb_id="799"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_QMIC_FLUENCE" acdb_id="131"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_TMIC" acdb_id="131"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="132"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED" acdb_id="150"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="150"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" acdb_id="7"/>
+
+        <device name="SND_DEVICE_IN_CAPTURE_FM" acdb_id="801"/>
+        <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="151"/>
+        <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_2" acdb_id="152"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_USB_HEADSET_MIC" acdb_id="133"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_MIC" acdb_id="143"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_STEREO_MIC" acdb_id="144"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_THREE_MIC" acdb_id="145"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_QUAD_MIC" acdb_id="146"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" acdb_id="147"/>
+        <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_QMIC_FLUENCE" acdb_id="131"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_TMIC" acdb_id="131"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="132"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="4"/>
+    </acdb_ids>
+
+    <module_ids>
+        <aec>
+            <device name="SND_DEVICE_IN_SPEAKER_TMIC_AEC_NS" module_id="0x10F35" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS_BROADSIDE" module_id="0x10F34" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" module_id="0x10F33" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_SPEAKER_MIC_AEC_NS" module_id="0x10F31" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" module_id="0x10F33" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_HANDSET_MIC_AEC_NS" module_id="0x10F31" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+        </aec>
+        <ns>
+            <device name="SND_DEVICE_IN_SPEAKER_TMIC_AEC_NS" module_id="0x10F35" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS_BROADSIDE" module_id="0x10F34" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" module_id="0x10F33" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_SPEAKER_MIC_AEC_NS" module_id="0x10F31" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" module_id="0x10F33" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_HANDSET_MIC_AEC_NS" module_id="0x10F31" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+        </ns>
+    </module_ids>
+
+    <bit_width_configs>
+        <device name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/>
+    </bit_width_configs>
+    <pcm_ids>
+        <usecase name="USECASE_AUDIO_PLAYBACK_LOW_LATENCY" type="out" id="13"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD" type="out" id="8"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD2" type="out" id="15"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD3" type="out" id="16"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD4" type="out" id="28"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD5" type="out" id="29"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD6" type="out" id="30"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD7" type="out" id="31"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD8" type="out" id="32"/>
+        <usecase name="USECASE_VOICEMMODE1_CALL" type="in" id="2"/>
+        <usecase name="USECASE_VOICEMMODE1_CALL" type="out" id="2"/>
+        <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="19"/>
+        <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="19"/>
+        <usecase name="USECASE_VOWLAN_CALL" type="in" id="-1"/>
+        <usecase name="USECASE_VOWLAN_CALL" type="out" id="-1"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_FM" type="out" id="5"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_FM" type="in" id="34"/>
+        <usecase name="USECASE_AUDIO_SPKR_CALIB_RX" type="out" id="5"/>
+        <usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="35"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_AFE_PROXY" type="out" id="6"/>
+        <usecase name="USECASE_AUDIO_RECORD_AFE_PROXY" type="in" id="7"/>
+        <usecase name="USECASE_AUDIO_RECORD_LOW_LATENCY" type="in" id="17" />
+        <usecase name="USECASE_AUDIO_PLAYBACK_ULL" type="out" id="17" />
+        <usecase name="USECASE_AUDIO_PLAYBACK_EXT_DISP_SILENCE" type="out" id="27" />
+        <usecase name="USECASE_AUDIO_PLAYBACK_VOIP" type="out" id="16" />
+        <usecase name="USECASE_AUDIO_RECORD_VOIP" type="in" id="16" />
+        <usecase name="USECASE_AUDIO_PLAYBACK_MMAP" type="out" id="33" />
+        <usecase name="USECASE_AUDIO_RECORD_MMAP" type="in" id="33" />
+        <usecase name="USECASE_AUDIO_A2DP_ABR_FEEDBACK" type="in" id="40" />
+        <usecase name="USECASE_INCALL_MUSIC_UPLINK" type="out" id="27" />
+    </pcm_ids>
+    <config_params>
+        <param key="spkr_1_tz_name" value="wsatz.13"/>
+        <param key="spkr_2_tz_name" value="wsatz.14"/>
+        <!-- In the below value string, the value indicates default mono -->
+        <!-- speaker. It can be set to either left or right              -->
+        <param key="mono_speaker" value="right"/>
+        <!-- In the below value string, first parameter indicates size -->
+        <!-- followed by perf lock options                             -->
+        <param key="perf_lock_opts" value="4, 0x40400000, 0x1, 0x40C00000, 0x1"/>
+        <param key="input_mic_max_count" value="3"/>
+        <param key="true_32_bit" value="true"/>
+        <!-- In the below value string, the value indicates sidetone gain in dB -->
+        <param key="usb_sidetone_gain" value="35"/>
+    </config_params>
+    <gain_db_to_level_mapping>
+        <gain_level_map db="-96.0" level="15"/>
+        <gain_level_map db="-9.8" level="14"/>
+        <gain_level_map db="-9.0" level="13"/>
+        <gain_level_map db="-8.3" level="12"/>
+        <gain_level_map db="-7.5" level="11"/>
+        <gain_level_map db="-6.7" level="10"/>
+        <gain_level_map db="-6.0" level="9"/>
+        <gain_level_map db="-5.1" level="8"/>
+        <gain_level_map db="-4.3" level="7"/>
+        <gain_level_map db="-3.6" level="6"/>
+        <gain_level_map db="-2.8" level="5"/>
+        <gain_level_map db="-2.0" level="4"/>
+        <gain_level_map db="-1.3" level="3"/>
+        <gain_level_map db="-0.5" level="2"/>
+        <gain_level_map db="0" level="1"/>
+    </gain_db_to_level_mapping>
+    <backend_names>
+        <device name="SND_DEVICE_OUT_AFE_PROXY" backend="afe-proxy" interface="PROXY_PORT_RX"/>
+        <device name="SND_DEVICE_OUT_ANC_FB_HEADSET" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_ANC_HEADSET" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_BT_A2DP" backend="bt-a2dp" interface="SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_BT_SCO" backend="bt-sco" interface="SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_BT_SCO_WB" backend="bt-sco-wb" interface="SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_HANDSET" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_HDMI" backend="hdmi" interface="HDMI_RX"/>
+        <device name="SND_DEVICE_OUT_HEADPHONES" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_LINE" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_ANC_HEADSET" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_ANC_FB_HEADSET" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_A2DP" backend="speaker-and-bt-a2dp" interface="SLIMBUS_0_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="SLIMBUS_0_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="SLIMBUS_0_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET" backend="speaker-and-usb-headphones" interface="SLIMBUS_0_RX-and-USB_AUDIO_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_ANC_HEADSET" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_ANC_FB_HEADSET" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_LINE" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_USB_HEADPHONES" backend="usb-headphones" interface="USB_AUDIO_RX"/>
+        <device name="SND_DEVICE_OUT_USB_HEADSET" backend="usb-headset" interface="USB_AUDIO_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_HANDSET" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_STEREO_PROTECTED" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TX" interface="SLIMBUS_0_RX"/>
+
+        <device name="SND_DEVICE_IN_BT_SCO_MIC" backend="bt-sco" interface="SLIMBUS_7_TX"/>
+        <device name="SND_DEVICE_IN_BT_SCO_MIC_WB" backend="bt-sco-wb" interface="SLIMBUS_7_TX"/>
+        <device name="SND_DEVICE_IN_CAPTURE_FM" backend="capture-fm" interface="SLIMBUS_8_TX"/>
+        <device name="SND_DEVICE_IN_SPEAKER_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_STEREO_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_USB_HEADSET_MIC" backend="usb-headset-mic" interface="USB_AUDIO_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_DMIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_RX" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_FULL_HEADSET_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" interface="SLIMBUS_0_TX"/>
+    </backend_names>
+    <microphone_characteristics>
+        <microphone valid_mask="31" device_id="builtin_mic_1" type="AUDIO_DEVICE_IN_BUILTIN_MIC" address="bottom" location="AUDIO_MICROPHONE_LOCATION_MAINBODY"
+            group="0" index_in_the_group="0" directionality="AUDIO_MICROPHONE_DIRECTIONALITY_OMNI" num_frequency_responses="93"
+            frequencies="100.00 106.00 112.00 118.00 125.00 132.00 140.00 150.00 160.00 170.00 180.00 190.00 200.00 212.00 224.00 236.00 250.00 265.00 280.00 300.00 315.00 335.00 355.00 375.00 400.00 425.00 450.00 475.00 500.00 530.00 560.00 600.00 630.00 670.00 710.00 750.00 800.00 850.00 900.00 950.00 1000.00 1060.00 1120.00 1180.00 1250.00 1320.00 1400.00 1500.00 1600.00 1700.00 1800.00 1900.00 2000.00 2120.00 2240.00 2360.00 2500.00 2650.00 2800.00 3000.00 3150.00 3350.00 3550.00 3750.00 4000.00 4250.00 4500.00 4750.00 5000.00 5300.00 5600.00 6000.00 6300.00 6700.00 7100.00 7500.00 8000.00 8500.00 9000.00 9500.00 10000.00 10600.00 11200.00 11800.00 12500.00 13200.00 14000.00 15000.00 16000.00 17000.00 18000.00 19000.00 20000.00"
+            responses="0.41 0.44 0.47 0.5 0.53 0.56 0.59 0.63 0.66 0.7 0.73 0.75 0.76 0.77 0.78 0.78 0.79 0.8 0.81 0.86 0.9 0.95 1 1.04 0.85 0.68 0.51 0.43 0.57 0.73 0.88 1.22 1.46 1.55 1.22 0.9 1.31 1.65 1.64 1.41 0.53 0.65 1.96 2.12 2.02 1.81 2.17 2.83 0.46 1.35 1.59 0.42 0.29 -0.06 -1.42 -0.73 0.11 1.28 1.66 2.75 3.28 4.8 3.52 2.59 3.52 2.06 1.74 1.26 3.31 5.58 5.39 5.43 3.98 3.92 3.46 2.26 4.72 5.72 4.4 4.73 4.65 3.73 4.18 4.47 2.85 3.2 5.28 6.44 7.16 5.99 6.64 1.81 7.14"
+            sensitivity="-37.0" max_spl="130.0" min_spl="29.0" orientation="0.0 -1.0 0.0" geometric_location="0.02274 0.000287 0.006596" />
+        <microphone valid_mask="31" device_id="builtin_mic_2" type="AUDIO_DEVICE_IN_BACK_MIC" address="top" location="AUDIO_MICROPHONE_LOCATION_MAINBODY"
+            group="0" index_in_the_group="1" directionality="AUDIO_MICROPHONE_DIRECTIONALITY_OMNI" num_frequency_responses="93"
+            frequencies="100.00 106.00 112.00 118.00 125.00 132.00 140.00 150.00 160.00 170.00 180.00 190.00 200.00 212.00 224.00 236.00 250.00 265.00 280.00 300.00 315.00 335.00 355.00 375.00 400.00 425.00 450.00 475.00 500.00 530.00 560.00 600.00 630.00 670.00 710.00 750.00 800.00 850.00 900.00 950.00 1000.00 1060.00 1120.00 1180.00 1250.00 1320.00 1400.00 1500.00 1600.00 1700.00 1800.00 1900.00 2000.00 2120.00 2240.00 2360.00 2500.00 2650.00 2800.00 3000.00 3150.00 3350.00 3550.00 3750.00 4000.00 4250.00 4500.00 4750.00 5000.00 5300.00 5600.00 6000.00 6300.00 6700.00 7100.00 7500.00 8000.00 8500.00 9000.00 9500.00 10000.00 10600.00 11200.00 11800.00 12500.00 13200.00 14000.00 15000.00 16000.00 17000.00 18000.00 19000.00 20000.00"
+            responses="-0.61 -0.51 -0.43 -0.34 -0.25 -0.16 -0.07 0.04 0.15 0.24 0.33 0.41 0.43 0.45 0.48 0.5 0.53 0.55 0.58 0.49 0.43 0.34 0.26 0.19 0.26 0.32 0.39 0.44 0.47 0.51 0.55 0.57 0.58 0.63 0.76 0.87 0.97 1 0.61 0.28 0.11 0.34 1.02 0.34 0.08 0.51 0.28 0.2 -1.01 -0.95 -0.77 -0.49 -0.25 -0.33 -0.29 0.4 1.03 0.41 0.44 -0.15 -0.05 0.5 -0.16 0.19 0.7 0.31 1.5 0.95 0.27 1.27 0.89 2.43 0.24 0.89 1.78 2.27 1.79 0.82 1.41 1.13 2.08 1.99 2.6 3.81 1.12 0.41 0.86 6.56 10.01 8.1 14.21 9.74 6.87"
+            sensitivity="-37.0" max_spl="130.0" min_spl="29.0" orientation="0.0 1.0 0.0" geometric_location="0.04769 0.157736 0.007065" />
+    </microphone_characteristics>
+    <snd_devices>
+        <input_snd_device>
+            <input_snd_device_mic_mapping>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_CAMCORDER_MIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_REC_MIC_AEC_NS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_REC_MIC_AEC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_REC_MIC_NS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_REC_MIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_HANDSET_MIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_DMIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_DMIC_TMUS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_VOICE_SPEAKER_DMIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_HANDSET_DMIC_AEC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_HANDSET_DMIC_NS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_HANDSET_DMIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_SPEAKER_DMIC_AEC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_SPEAKER_DMIC_NS">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_SPEAKER_MIC">
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_UNPROCESSED_MIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_UNPROCESSED_STEREO_MIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_UNPROCESSED_THREE_MIC">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_HANDSET_DMIC_STEREO">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                    <snd_dev in_snd_device="SND_DEVICE_IN_SPEAKER_DMIC_STEREO">
+                        <mic_info mic_device_id="builtin_mic_1"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+            </input_snd_device_mic_mapping>
+        </input_snd_device>
+    </snd_devices>
+</audio_platform_info>
