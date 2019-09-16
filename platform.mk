@@ -137,6 +137,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.sm8150
 
+# Look for camera.qcom.so instead of camera.$(BOARD_TARGET_PLATFORM).so
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.camera=qcom
+
 # QCOM Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
