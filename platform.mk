@@ -137,6 +137,8 @@ PRODUCT_PACKAGES += \
     gps.sm8150
 
 # CAMERA
+TARGET_USES_64BIT_CAMERA := true
+
 PRODUCT_PACKAGES += \
     camera.sm8150
 
