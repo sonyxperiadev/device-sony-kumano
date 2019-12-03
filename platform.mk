@@ -19,14 +19,14 @@ SOMC_PLATFORM := kumano
 SOMC_KERNEL_VERSION := 4.14
 KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
 
-$(call inherit-product, device/sony/common/common.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(PLATFORM_COMMON_PATH)/overlay
+
+# Graphics allocator/mapper v3
+TARGET_HARDWARE_GRAPHICS_V3 := true
 
 # Keymaster 4
 TARGET_KEYMASTER_V4 := true
@@ -176,3 +176,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # QTI Haptics Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator@1.2-service
+
+$(call inherit-product, device/sony/common/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
