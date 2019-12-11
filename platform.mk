@@ -171,7 +171,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
+    ro.vendor.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
 
 # QTI Haptics Vibrator
 PRODUCT_PACKAGES += \
