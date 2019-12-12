@@ -31,6 +31,8 @@ TARGET_HARDWARE_GRAPHICS_V3 := true
 # Keymaster 4
 TARGET_KEYMASTER_V4 := true
 
+TARGET_VIBRATOR_V1_2 := true
+
 # A/B support
 AB_OTA_UPDATER := true
 PRODUCT_SHIPPING_API_LEVEL := 26
@@ -172,10 +174,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
-
-# QTI Haptics Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator@1.2-service
 
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
