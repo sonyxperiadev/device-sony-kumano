@@ -175,5 +175,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.gralloc.disable_ubwc=0 \
+    vendor.display.disable_scaler=0
+
+# Display - HDR/WCG
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
+    ro.surface_flinger.has_wide_color_display=true \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.wcg_composition_dataspace=143261696
+
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
