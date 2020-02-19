@@ -11,11 +11,13 @@
 /dev/smd5                 0660   system     system
 /dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
-/dev/ipa                  0660   system     net_admin
+/dev/ipa                  0660   radio      radio
 /dev/wwan_ioctl           0660   system     net_admin
 /dev/ipaNatTable          0660   net_admin  net_admin
 /dev/rmnet_ctrl           0660   usb        usb
 /dev/dpl_ctrl             0660   usb        usb
+/dev/ipa_odl_ctl          0660   radio      radio
+/dev/ipa_adpl             0660   radio      radio
 
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     diag
