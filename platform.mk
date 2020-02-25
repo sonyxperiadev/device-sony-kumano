@@ -31,6 +31,9 @@ TARGET_HARDWARE_GRAPHICS_V3 := true
 # Keymaster 4
 TARGET_KEYMASTER_V4 := true
 
+# RIL
+TARGET_USE_QCRILD := true
+
 TARGET_VIBRATOR_V1_2 := true
 
 # A/B support
