@@ -129,6 +129,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm/dpm.conf
 
+# CAMX config
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
+
 # Platform specific init
 PRODUCT_PACKAGES += \
     init.kumano \
