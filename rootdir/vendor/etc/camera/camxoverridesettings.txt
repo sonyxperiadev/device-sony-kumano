@@ -4,7 +4,5 @@ logVerboseMask=0
 logWarningMask=0
 systemLogEnable=FALSE
 maxHalRequests=9
-enableDualIFE=FALSE
-waitAllResultsTimeout=10
 numPCRsBeforeStreamOn=1
 preFlashMaxFrameWaitLimitAF=45
