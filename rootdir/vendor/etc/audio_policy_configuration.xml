@@ -50,8 +50,11 @@
         <module name="primary" halVersion="2.0">
             <attachedDevices>
                 <item>Speaker</item>
+                <item>Earpiece</item>
+                <item>Telephony Tx</item>
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
+                <item>Telephony Rx</item>
             </attachedDevices>
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
