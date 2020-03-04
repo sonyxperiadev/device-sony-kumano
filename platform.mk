@@ -155,6 +155,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.sm8150
 
+# Sensors
+PRODUCT_PACKAGES += \
+    hals.conf
+
 # CAMERA
 TARGET_USES_64BIT_CAMERA := true
 
