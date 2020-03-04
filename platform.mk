@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    sns_reg_config \
     hals.conf
 
 # CAMERA
