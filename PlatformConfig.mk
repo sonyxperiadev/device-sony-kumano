@@ -102,9 +102,6 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 # Lights HAL: Backlight
 TARGET_USES_SDE := true
 
-# Treble
-BOARD_VNDK_VERSION := current
-
 # Build a separate vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -115,7 +112,5 @@ BOARD_AVB_ENABLE := true
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 include device/sony/common/CommonConfig.mk
