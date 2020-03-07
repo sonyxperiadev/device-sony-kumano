@@ -113,4 +113,7 @@ TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
+# DTBO partition definitions
+TARGET_NEEDS_DTBOIMAGE ?= true
+
 include device/sony/common/CommonConfig.mk
