@@ -17,7 +17,6 @@ PLATFORM_COMMON_PATH := device/sony/kumano
 
 SOMC_PLATFORM := kumano
 SOMC_KERNEL_VERSION := 4.14
-KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
