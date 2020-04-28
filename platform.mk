@@ -254,6 +254,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
+# NFC eSE Support
+PRODUCT_PACKAGES += \
+    SecureElement \
+    android.hardware.secure_element@1.1-service
+
 # Audio - Android System
 PRODUCT_PROPERTY_OVERRIDES += \
     aaudio.mmap_policy=2 \
