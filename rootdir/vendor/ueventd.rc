@@ -149,7 +149,7 @@
 /dev/ttyMSM0                                0660 bluetooth bluetooth
 
 # NFC
-/dev/pn54x                                                      0660 nfc nfc
+/dev/pn553                                                      0660 nfc nfc
 /sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  init_deinit 0200 nfc nfc
 /sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  set_pwr     0200 nfc nfc
 /sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  res_ready   0400 nfc nfc
