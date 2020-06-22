@@ -267,6 +267,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     aaudio.hw_burst_min_usec=2000 \
     af.fast_track_multiplier=1
 
+# Audio - QCOM HAL
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.display_port.enable=true \
+    vendor.audio.feature.hdmi_edid.enable=true \
+    vendor.audio.feature.hdmi_passthrough.enable=true
+
 # Audio - QCOM proprietary
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.adm.buffering.ms=3
