@@ -265,16 +265,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     aaudio.mmap_policy=2 \
     aaudio.mmap_exclusive_policy=2 \
     aaudio.hw_burst_min_usec=2000 \
-    audio.offload.video=true \
-    audio.deep_buffer.media=true \
     af.fast_track_multiplier=1
 
 # Audio - QCOM HAL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qc.sdk.audio.fluencetype=fluence \
-    vendor.audio_hal.period_size=192 \
-    vendor.audio_hal.in_period_size=144 \
-    vendor.audio_hal.period_multiplier=3
+    vendor.audio.feature.display_port.enable=true \
+    vendor.audio.feature.hdmi_edid.enable=true \
+    vendor.audio.feature.hdmi_passthrough.enable=true
 
 # Audio - QCOM proprietary
 PRODUCT_PROPERTY_OVERRIDES += \
