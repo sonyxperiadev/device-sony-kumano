@@ -34,6 +34,7 @@ TARGET_VIBRATOR_V1_2 := true
 
 # DSP
 TARGET_NEEDS_AUDIOPD := true
+TARGET_NEEDS_SDSP_SENSORS_PDR := true
 
 # A/B support
 AB_OTA_UPDATER := true
