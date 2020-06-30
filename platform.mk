@@ -285,7 +285,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.display_port.enable=true \
     vendor.audio.feature.hdmi_edid.enable=true \
-    vendor.audio.feature.hdmi_passthrough.enable=true
+    vendor.audio.feature.hdmi_passthrough.enable=true \
+    vendor.audio.offload.buffer.size.kb=32
 
 # Audio - QCOM proprietary
 PRODUCT_PROPERTY_OVERRIDES += \
