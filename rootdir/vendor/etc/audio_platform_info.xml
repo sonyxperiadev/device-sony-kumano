@@ -33,14 +33,19 @@
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_DISPLAY_PORT" acdb_id="18"/>
+        <device name="SND_DEVICE_OUT_HDMI" acdb_id="18"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADSET" acdb_id="10"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" acdb_id="7"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADSET" acdb_id="17"/>
         <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" acdb_id="257"/>
         <device name="SND_DEVICE_OUT_BT_SCO_WB" acdb_id="39"/>
         <device name="SND_DEVICE_OUT_BT_A2DP" acdb_id="20"/>
+        <device name="SND_DEVICE_OUT_USB_HEADSET" acdb_id="45"/>
 
+        <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="102"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="151"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_2" acdb_id="152"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_USB_HEADSET_MIC" acdb_id="133"/>
@@ -51,17 +56,26 @@
         <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" acdb_id="147"/>
         <device name="SND_DEVICE_IN_SPEAKER_MIC" acdb_id="11"/>
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="544"/>
-        <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="102"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6"/> 
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="528"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="4"/>
-        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="11"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC" acdb_id="16"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="35"/>
+        <device name="SND_DEVICE_IN_VOICE_FLUENCE_DMIC_AANC" acdb_id="105"/>
 
         <device name="SND_DEVICE_IN_HANDSET_DMIC_STEREO" acdb_id="35"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC" acdb_id="528"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC" acdb_id="560"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_AEC" acdb_id="529"/>
-        <device name="SND_DEVICE_IN_BT_SCO_MIC_WB" acdb_id="550"/>
+
+        <device name="SND_DEVICE_IN_BT_SCO_MIC" acdb_id="21"/>
+        <device name="SND_DEVICE_IN_BT_SCO_MIC_NREC" acdb_id="282"/>
+        <device name="SND_DEVICE_IN_BT_SCO_MIC_WB" acdb_id="38"/>
+        <device name="SND_DEVICE_IN_BT_SCO_MIC_WB_NREC" acdb_id="550"/>
+
+        <device name="SND_DEVICE_IN_USB_HEADSET_MIC" acdb_id="44" />
+        <device name="SND_DEVICE_IN_UNPROCESSED_USB_HEADSET_MIC" acdb_id="133" />
+        <device name="SND_DEVICE_IN_USB_HEADSET_MULTI_CHANNEL_MIC" acdb_id="162" />
     </acdb_ids>
 
     <app_types>
