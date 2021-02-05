@@ -1,12 +1,17 @@
+Kumano platform
+===============
 Copyright (C) Sony Mobile Communications 2019
-=============================================
+---------------------------------------------
 
-This is the Android device configuration for kumano platform.
+Android device configuration for the kumano platform (**SM8150**).
 
-Kumano devices:
+### Supported devices
 
-    Xperia 1 ....................... griffin
-    Xperia 5 ....................... bahamut
+| Device | Codename |
+|-|:-:|
+| Xperia 1 | [griffin](https://github.com/sonyxperiadev/device-sony-griffin) |
+| Xperia 5 | [bahamut](https://github.com/sonyxperiadev/device-sony-bahamut) |
 
-Build instructions
+### Build instructions
+
 https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/
