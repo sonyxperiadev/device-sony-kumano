@@ -6,3 +6,17 @@ systemLogEnable=FALSE
 maxHalRequests=9
 numPCRsBeforeStreamOn=1
 preFlashMaxFrameWaitLimitAF=45
+numMetadataResults=1
+waitAllResultsTimeout=20
+
+enableDualIFE=TRUE
+dualBHistSupport=TRUE
+overrideEnableMFNR=1
+enableOfflineNoiseReprocess=1
+enableCHIPartialData=CHIPartialDataSeparate
+enableTBMChiFence=TRUE
+
+enableFDStreamInRealTime=TRUE
+enableSMDetection=TRUE
+enableCTDetection=TRUE
+
