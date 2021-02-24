@@ -205,7 +205,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
 
-
 # Platform specific init
 PRODUCT_PACKAGES += \
     init.kumano \
@@ -306,9 +305,6 @@ PRODUCT_PACKAGES += \
 
 # CAMERA
 TARGET_USES_64BIT_CAMERA := true
-
-PRODUCT_PACKAGES += \
-    camera.sm8150
 
 # Look for camera.qcom.so instead of camera.$(BOARD_TARGET_PLATFORM).so
 PRODUCT_PROPERTY_OVERRIDES += \
