@@ -207,6 +207,11 @@ PRODUCT_PACKAGES += \
     init.kumano.pwr \
     ueventd
 
+# CDSP init
+PRODUCT_PACKAGES += \
+    init.qcom.cdspstart.sh \
+    cdsprpcd.rc
+
 # Audio init
 PRODUCT_PACKAGES += \
     audiopd.rc
