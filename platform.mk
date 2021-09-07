@@ -202,6 +202,7 @@ PRODUCT_COPY_FILES += \
 
 # Platform specific init
 PRODUCT_PACKAGES += \
+    tad.rc \
     init.kumano \
     init.kumano.pwr \
     ueventd
