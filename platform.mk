@@ -78,7 +78,6 @@ AUDIO_FEATURE_ENABLED_DISPLAY_PORT := true
 AUDIO_FEATURE_ENABLED_USB_BURST_MODE := true
 
 # DSP
-TARGET_NEEDS_AUDIOPD := true
 TARGET_NEEDS_SDSP_SENSORS_PDR := true
 
 # SSC Sensors
@@ -209,6 +208,10 @@ PRODUCT_PACKAGES += \
     init.kumano \
     init.kumano.pwr \
     ueventd
+
+# Audio init
+PRODUCT_PACKAGES += \
+    audiopd.rc
 
 # Audio
 PRODUCT_PACKAGES += \
