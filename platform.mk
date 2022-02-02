@@ -30,9 +30,6 @@ SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 DEVICE_PACKAGE_OVERLAYS += \
     $(PLATFORM_COMMON_PATH)/overlay
 
-# Keymaster 4
-TARGET_KEYMASTER_V4 := true
-
 # RIL
 TARGET_PER_MGR_ENABLED := true
 
@@ -228,6 +225,17 @@ PRODUCT_PACKAGES += \
     gralloc.sm8150 \
     hwcomposer.sm8150 \
     memtrack.sm8150
+
+# Keymaster 4 passthrough service init file
+# (executable is on odm)
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service-qti.rc \
+    android.hardware.keymaster@4.1.vendor
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.keymaster.version=v4
+
+DEVICE_MANIFEST_FILE += $(PLATFORM_COMMON_PATH)/vintf/android.hw.keymaster_v4.xml
 
 # GPS
 PRODUCT_PACKAGES += \
