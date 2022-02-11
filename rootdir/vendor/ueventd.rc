@@ -151,12 +151,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/ttyMSM0                                0660 bluetooth bluetooth
 
 # NFC
-/dev/pn553                                                      0660 nfc nfc
-/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  init_deinit 0200 nfc nfc
-/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  set_pwr     0200 nfc nfc
-/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  res_ready   0400 nfc nfc
-/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  recv_rsp    0600 nfc nfc
-/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  send_cmd    0200 nfc nfc
+/dev/pn553                                  0660 nfc nfc
 
 # LED
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* max_brightness 0664 system system
