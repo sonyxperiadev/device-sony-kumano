@@ -153,18 +153,28 @@ firmware_directories /vendor/firmware_mnt/image/
 # NFC
 /dev/pn553                                  0660 nfc nfc
 
-# LED
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* max_brightness 0664 system system
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* brightness     0664 system system
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* breath          0664 system system
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* trigger      0664 system system
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* delay_off       0664 system system
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/* delay_on       0664 system system
+# LED class devices
+/sys/class/leds/red      max_brightness     0664 system    system
+/sys/class/leds/red      brightness         0664 system    system
+/sys/class/leds/red      breath             0664 system    system
+/sys/class/leds/red      trigger            0664 system    system
+/sys/class/leds/red      delay_off          0664 system    system
+/sys/class/leds/red      delay_on           0664 system    system
+/sys/class/leds/green    max_brightness     0664 system    system
+/sys/class/leds/green    brightness         0664 system    system
+/sys/class/leds/green    breath             0664 system    system
+/sys/class/leds/green    trigger            0664 system    system
+/sys/class/leds/green    delay_off          0664 system    system
+/sys/class/leds/green    delay_on           0664 system    system
+/sys/class/leds/blue     max_brightness     0664 system    system
+/sys/class/leds/blue     brightness         0664 system    system
+/sys/class/leds/blue     breath             0664 system    system
+/sys/class/leds/blue     trigger            0664 system    system
+/sys/class/leds/blue     delay_off          0664 system    system
+/sys/class/leds/blue     delay_on           0664 system    system
 
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  max_brightness 0664 system system
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  brightness     0664 system system
-/sys/class/backlight/panel0-backlight max_brightness                                                                                  0644 root system
-/sys/class/backlight/panel0-backlight brightness                                                                                      0664 system system
+/sys/class/backlight/panel0-backlight max_brightness    0644 root   system
+/sys/class/backlight/panel0-backlight brightness        0664 system system
 
 # Fingerprint sensor  device
 /dev/fingerprint         0664 system input
