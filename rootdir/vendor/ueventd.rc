@@ -78,7 +78,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/system_health_monitor 0640  radio      system
 /dev/mdss_rotator         0664   system     system
 /dev/msm_rotator          0660   system     system
-/dev/hw_random            0660   system     system
 /dev/adsprpc-smd          0664   system     system
 /dev/adsprpc-smd-secure   0664   system     system
 /dev/sdsprpc-smd          0664   system     system
