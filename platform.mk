@@ -67,12 +67,23 @@ WCNSS_FILTER_USES_SIBS := true
 NXP_CHIP_FW_TYPE := PN557
 
 # Audio
-BOARD_SUPPORTS_SOUND_TRIGGER := true
+AUDIO_FEATURE_ENABLED_AHAL_EXT := false
+AUDIO_FEATURE_ENABLED_CONCURRENT_CAPTURE := true
+AUDIO_FEATURE_ENABLED_DTS_EAGLE := false
+AUDIO_FEATURE_ENABLED_DLKM := false
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := false
+AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
+AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
+AUDIO_FEATURE_ENABLED_GKI := true
+AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
 AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
-AUDIO_FEATURE_ENABLED_HDMI_EDID := true
-AUDIO_FEATURE_ENABLED_HDMI_PASSTHROUGH := true
-AUDIO_FEATURE_ENABLED_DISPLAY_PORT := true
-AUDIO_FEATURE_ENABLED_USB_BURST_MODE := true
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+AUDIO_FEATURE_ENABLED_SSR := true
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true
+BOARD_SUPPORTS_QAHW := false
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_USES_ALSA_AUDIO := true
+TARGET_USES_QCOM_MM_AUDIO := true
 
 # Display
 TARGET_HAS_HDR_DISPLAY := true
@@ -339,24 +350,86 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
-# Audio - Android System
-PRODUCT_PROPERTY_OVERRIDES += \
-    aaudio.mmap_policy=2 \
-    aaudio.mmap_exclusive_policy=2 \
-    aaudio.hw_burst_min_usec=2000 \
-    af.fast_track_multiplier=1
-
 # Audio - QCOM HAL
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio_hal.period_size=192 \
+    persist.vendor.audio.ambisonic.capture=false \
+    persist.vendor.audio.ambisonic.auto.profile=false \
+    persist.vendor.audio.apptype.multirec.enabled=false \
+    ro.vendor.audio.sdk.fluencetype=none \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.tmic.enabled=false \
+    persist.vendor.audio.spv3.enable=true \
+    persist.vendor.audio.avs.afe_api_version=2 \
+    vendor.audio.tunnel.encode=false \
+    persist.vendor.audio.ras.enabled=false \
+    vendor.audio.offload.buffer.size.kb=32 \
+    vendor.voice.path.for.pcm.voip=true \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.offload.multiple.enabled=false \
+    vendor.audio.offload.passthrough=false \
+    ro.vendor.audio.sdk.ssr=false \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.safx.pbe.enabled=false \
+    ro.bluetooth.a2dp_offload.supported=true \
+    persist.bluetooth.a2dp_offload.disabled=false \
+    vendor.audio.use.sw.alac.decoder=true \
+    vendor.audio.use.sw.ape.decoder=true \
+    vendor.audio_hal.in_period_size=144 \
+    vendor.audio_hal.period_multiplier=3 \
+    vendor.audio.volume.headset.gain.depcal=true \
+    persist.vendor.audio.fluence.voicecomm=true \
+    vendor.audio.hal.output.suspend.supported=true \
+    persist.vendor.audio.voicecall.speaker.stereo=true \
+    persist.vendor.bt.aac_frm_ctl.enabled=true \
+    persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
+
+# Audio dynamic feature flags
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.a2dp_offload.enable=true \
+    vendor.audio.feature.afe_proxy.enable=true \
+    vendor.audio.feature.anc_headset.enable=false \
+    vendor.audio.feature.battery_listener.enable=true \
+    vendor.audio.feature.compr_cap.enable=false \
     vendor.audio.feature.compress_in.enable=true \
+    vendor.audio.feature.compress_meta_data.enable=true \
+    vendor.audio.feature.compr_voip.enable=false \
+    vendor.audio.feature.concurrent_capture.enable=true \
+    vendor.audio.feature.custom_stereo.enable=true \
     vendor.audio.feature.display_port.enable=true \
+    vendor.audio.feature.dsm_feedback.enable=false \
+    vendor.audio.feature.dynamic_ecns.enable=true \
+    vendor.audio.feature.ext_hw_plugin.enable=false \
+    vendor.audio.feature.external_dsp.enable=false \
+    vendor.audio.feature.external_speaker.enable=false \
+    vendor.audio.feature.external_speaker_tfa.enable=false \
+    vendor.audio.feature.fluence.enable=true \
+    vendor.audio.feature.fm.enable=true \
     vendor.audio.feature.hdmi_edid.enable=true \
     vendor.audio.feature.hdmi_passthrough.enable=true \
-    vendor.audio.offload.buffer.size.kb=32
-
-# Audio - QCOM proprietary
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio.adm.buffering.ms=3
+    vendor.audio.feature.hfp.enable=true \
+    vendor.audio.feature.hifi_audio.enable=false \
+    vendor.audio.feature.hwdep_cal.enable=false \
+    vendor.audio.feature.incall_music.enable=true \
+    vendor.audio.feature.multi_voice_session.enable=true \
+    vendor.audio.feature.keep_alive.enable=true \
+    vendor.audio.feature.kpi_optimize.enable=true \
+    vendor.audio.feature.maxx_audio.enable=false \
+    vendor.audio.feature.ras.enable=true \
+    vendor.audio.feature.record_play_concurency.enable=false \
+    vendor.audio.feature.src_trkn.enable=true \
+    vendor.audio.feature.spkr_prot.enable=true \
+    vendor.audio.feature.ssrec.enable=true \
+    vendor.audio.feature.usb_offload.enable=true \
+    vendor.audio.feature.usb_offload_burst_mode.enable=true \
+    vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
+    vendor.audio.feature.deepbuffer_as_primary.enable=false \
+    vendor.audio.feature.vbat.enable=true \
+    vendor.audio.feature.wsa.enable=false \
+    vendor.audio.feature.audiozoom.enable=false \
+    vendor.audio.feature.snd_mon.enable=true
 
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
